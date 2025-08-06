@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e27baaf9c1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Manasa</div>
+        <nav>
+            <div>
+            <a href="#About">About</a>
+            <a href="#MyExpertise">My Expertise</a>
+            <a href="#Projects">My Projects</a>
+            <a href="#Contact">Contact</a>
+            <a href="#ContactForm">Contact Form</a>
+            <!-- <i class="fa-solid fa-xmark" style="color:white"></i>
+            <i class="fa-solid fa-bars" style="color:white"></i> -->
+            </div>            
+        </nav>
+    
+        <div class="header-text">
+            <p>Web Designer</p>
+            <h2>Hi, I'm <span>Manasa Yasaswini</span><br>from India</h2>
+        </div>
+    </header>
+
+    <section id="About" class="row">
+        <div class="about-col-1">
+            <h2>About Me</h2>
+            <p>Hi! I'm Manasa Yasaswini, a web developer with a passion for design and coding. I love creating elegant, user-friendly sites.</p>
+        </div>
+        <div class="about-col-2">
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            </div>
+            <div class="tab-contents active-tab" id="education">
+                <ul>
+                    <li><span>B.Tech(Ece)</span><br>Avanthi Inst. Of Engg & Tech<br><b>Cgpa:</b>6.98</li>
+                    <li><span>Intermediate</span><br><b>Cgpa:</b>8.2</li>
+                    <li><span>10th SSC</span><br><b>Cgpa:</b>9.8</li>
+                </ul>
+            </div>
+            <div class="tab-contents " id="experience">
+                <ul>
+                    <li><span>Jr.Associate</span><br>WNS Global Services</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+<section id="MyExpertise" class="skills"><div><h2>My Expertise</h2></div>
+    <section class="skills-grid-container">
+    
+    <div class="skills-grid">
+        <!-- Block 1: Programming Languages -->
+        <div class="skill-block programming">
+            <div class="skill-icon"><i class="fa-solid fa-desktop"></i></div>
+            <h3>Programming Languages</h3>
+            <ul>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>C Language</li>
+            </ul>
+        </div>
+        
+        <!-- Block 2: Frontend Development -->
+        <div class="skill-block frontend">
+            <div class="skill-icon"><i class="fa-solid fa-palette" style="color: #03070b;"></i></div>
+            <h3>Frontend Development</h3>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Responsive Design</li>
+            </ul>
+        </div>
+        
+        <!-- Block 3: Design & Tools -->
+        <div class="skill-block design">
+            <div class="skill-icon"><i class="fa-brands fa-square-figma"></i></div>
+            <h3>Design & Tools</h3>
+            <ul>
+                <li>Figma</li>
+            </ul>
+        </div>
+        
+        <!-- Block 4: Additional Skills -->
+        <div class="skill-block additional">
+            <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>Additional Skills</h3>
+            <ul>
+                <li>Typing Speed: 30 WPM</li>
+                <li>Problem Solving</li>
+            </ul>
+        </div>
+    </div>
+    </section>
+</section>
+
+    <!-- <section id="Skills">
+        <h2>My Skills</h2>
+        <ul>
+            <li>C language</li>
+            <li>Python</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Figma</li>
+            <li>Type Speed: 30wpm</li>
+        </ul>
+    </section> -->
+
+    <section id="Projects">
+        <h2>My Projects</h2>
+        <div class="projects-list">
+            <div>
+                <h3>Academic Projects</h3>
+                <ul>
+                <li>Smart Road Safety System</li>
+                <li>Smart Safety Device for Women & Children</li>
+                </ul>
+                <!-- <p>A simple portfolio of mine</p> -->
+                <a href="Academic.txt" target="_blank">Learn more</a>
+            </div>
+            <div>
+                <h3>Non Academic Projects</h3>
+                <ul>
+                    <li>My Portfolio</li>
+                    <li>Smart Blind Stick</li>
+                </ul>
+                <a href="Non_Academic.txt" target="_blank">Learn more</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="Contact">
+        <h2>My Contact Info</h2>
+        <ul>
+            <li><b>Name:</b> B.Manasa Yasaswini</li>
+            <li><b>Address:</b> Visakhapatnam, Andhra Pradesh, India</li>
+            <li><b>Email:</b> manasayasaswini255@gmail.com</li>
+        </ul>
+    </section>
+
+    <section id="ContactForm">
+        <h2>Contact Form</h2>
+        <form name="submit-to-google-sheet">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email ID</label>
+            <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <span id="msg"></span>
+    </section>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/manasa255" target="_blank" rel="noopener noreferrer">
+            <button type="button"><i class="fa-brands fa-square-linkedin" style="color: #6386c4;"></i></button>
+        </a>
+        <a href="https://github.com/Manasayasaswini" target="_blank" rel="noopener noreferrer">
+            <button type="button"><i class="fa-brands fa-github" style="color: #6386c4;"></i></button>
+        </a>
+        <p>&copy; 2025 Manasa</p>
+    </footer>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname) {
+            for(tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwCsUbZSOggEaAK75xL54YPR9oqF4rKaDk5VBDiyd_DeqZvnqd37aZR-X-BKeGrNN4RuQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+          })
+          .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>
