@@ -19,6 +19,7 @@
             <nav>
                 <a href="#About">About</a>
                 <a href="#MyExpertise">Skills</a>
+                <a href="#Course">Course</a>
                 <a href="#Projects">Projects</a>
                 <a href="#Internship">Experience</a>
                 <a href="#Contact">Contact</a>
@@ -28,9 +29,9 @@
         <div class="hero-content">
             <div class="hero-text">
                 <span class="hero-greeting">Hello, I'm</span>
-                <h1 class="hero-name">Manasa<br><span>Yasaswini</span></h1>
-                <p class="hero-role">Web Designer &amp; Developer</p>
-                <p class="hero-bio">Passionate about crafting elegant, user-friendly web experiences. Based in Visakhapatnam, India.</p>
+                <h1 class="hero-name">B. Manasa<br><span>Yasaswini</span></h1>
+                <p class="hero-role">Backend Heavy Full-Stack Developer</p>
+                <p class="hero-bio">Motivated Web Designer and Full-Stack Developer with hands-on experience building AI-powered web applications using Python, Flask, HTML5, CSS3, and JavaScript. Experienced in REST API development, database management (SQLite), and deploying applications to production. Passionate about building user-friendly, real-world products.</p>
                 <div class="hero-buttons">
                     <a href="#Contact" class="btn btn-primary">Get In Touch</a>
                     <a href="resume.pdf" class="btn btn-outline" target="_blank" download>
@@ -40,7 +41,7 @@
             </div>
             <div class="hero-image-wrap">
                 <div class="hero-image-ring"></div>
-                <img src="images/profile.jpg" alt="Manasa Yasaswini" class="hero-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <img src="images/mobile_image.jpg" alt="Manasa Yasaswini" class="hero-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                 <div class="hero-photo-placeholder">
                     <i class="fa-solid fa-user"></i>
                 </div>
@@ -59,24 +60,18 @@
         <div class="row">
             <div class="about-col-1">
                 <h2>About Me</h2>
-                <p>Hi! I'm <strong>Manasa Yasaswini</strong>, a web developer with a passion for design and coding. I love creating elegant, user-friendly sites that look great and work seamlessly.</p>
-                <p>Currently seeking opportunities to grow as a frontend developer and contribute to meaningful projects.</p>
+                <p>Motivated Web Designer and Full-Stack Developer with hands-on experience building AI-powered web applications using Python, Flask, HTML5, CSS3, and JavaScript. Experienced in REST API development, database management (SQLite), and deploying applications to production.</p>
+                <p>Passionate about building user-friendly, real-world products and eager to contribute to a dynamic development team.</p>
             </div>
             <div class="about-col-2">
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('education')">Education</p>
-                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
                 </div>
                 <div class="tab-contents active-tab" id="education">
                     <ul>
-                        <li><span>B.Tech (ECE)</span><br>Avanthi Inst. of Engg &amp; Tech<br><b>CGPA:</b> 6.98</li>
-                        <li><span>Intermediate (MPC)</span><br><b>CGPA:</b> 8.2</li>
-                        <li><span>10th SSC</span><br><b>CGPA:</b> 9.8</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="experience">
-                    <ul>
-                        <li><span>Jr. Associate</span><br>WNS Global Services<br><i>Business Process Outsourcing</i></li>
+                        <li><span>B.Tech (ECE)</span><br>Avanthi Institute of Engineering &amp; Tech<br><b>CGPA:</b> 6.98 | <b>Year:</b> 2019 – 2023</li>
+                        <li><span>Intermediate (MPC)</span><br>Sri Chaitanya Junior College<br><b>CGPA:</b> 8.2 | <b>Year:</b> 2017 – 2019</li>
+                        <li><span>10th SSC</span><br>Ravindra Bharathi EM School<br><b>CGPA:</b> 9.8 | <b>Year:</b> 2017</li>
                     </ul>
                 </div>
             </div>
@@ -107,13 +102,22 @@
                         <li>Responsive Design</li>
                     </ul>
                 </div>
+                <div class="skill-block backend">
+                    <div class="skill-icon"><i class="fa-solid fa-server"></i></div>
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Flask</li>
+                        <li>REST APIs</li>
+                        <li>SQLite, PostgreSQL</li>
+                    </ul>
+                </div>
                 <div class="skill-block design">
                     <div class="skill-icon"><i class="fa-brands fa-square-figma"></i></div>
                     <h3>Design & Tools</h3>
                     <ul>
                         <li>Figma</li>
-                        <li>UI/UX Design</li>
-                        <li>Wireframing</li>
+                        <li>Git & GitHub</li>
+                        <li>VS Code</li>
                     </ul>
                 </div>
                 <div class="skill-block additional">
@@ -125,42 +129,81 @@
                         <li>Team Collaboration</li>
                     </ul>
                 </div>
+                <div class="skill-block deployment">
+                    <div class="skill-icon"><i class="fa-solid fa-cloud"></i></div>
+                    <h3>Deployment</h3>
+                    <ul>
+                        <li>Vercel</li>
+                        <li>Live Custom Domains</li>
+                        <li>AI/LLM Integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== COURSE ===== -->
+    <section id="Course">
+        <div class="section-label">03 — Training</div>
+        <h2>Course</h2>
+        <div class="projects-list">
+            <div class="project-card course-card">
+                <div class="project-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <h3>Backend Heavy Full-Stack Developer</h3>
+                <p><strong>AI Karyashala</strong> — Maddilapalem, Visakhapatnam</p>
+                <p>7-month intensive program covering Python, Flask, REST APIs, Databases (SQLite, PostgreSQL), HTML5, CSS3, JavaScript, Web Development, and AI/LLM Integration. Focus on building production-ready applications and deploying to live platforms.</p>
+                <span class="project-tag">Course</span>
             </div>
         </div>
     </section>
 
     <!-- ===== PROJECTS ===== -->
     <section id="Projects">
-        <div class="section-label">03 — Work</div>
+        <div class="section-label">04 — Work</div>
         <h2>My Projects</h2>
         <div class="projects-list">
             <div class="project-card">
-                <div class="project-icon"><i class="fa-solid fa-road"></i></div>
-                <h3>Smart Road Safety System</h3>
-                <p>An IoT-based system designed to monitor and improve road safety using smart sensors and alert mechanisms.</p>
-                <span class="project-tag">Academic</span>
+                <div class="project-icon"><i class="fa-solid fa-book"></i></div>
+                <h3>MyTechicon</h3>
+                <p>AI-Powered Technical Dictionary - Built a full-stack web app enabling users to capture, simplify, and master technical terms through AI-generated definitions and personal multimedia notes.</p>
+                <span class="project-tag">AI/ML</span>
+                <a href="https://github.com/Manasayasaswini/MyTechicon" target="_blank">GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="https://www.530020.online/mytechicon" target="_blank">Live Demo <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="project-card">
+                <div class="project-icon"><i class="fa-solid fa-om"></i></div>
+                <h3>Sanskrit Sarathi</h3>
+                <p>Sanskrit Learning Platform - An interactive web platform to teach Sanskrit through structured lessons, vocabulary, and practice exercises.</p>
+                <span class="project-tag">Web Dev</span>
+                <a href="https://github.com/Manasayasaswini/SanskritSarathi" target="_blank">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="project-card">
+                <div class="project-icon"><i class="fa-solid fa-dna"></i></div>
+                <h3>BlastAnalyser</h3>
+                <p>Bioinformatics AI Tool - Developed during Buildathon 2026 in Visakhapatnam. Analyses BLAST DNA sequence results using LLM for genomic data insights.</p>
+                <span class="project-tag">AI/ML</span>
+                <a href="https://github.com/Buildathon26/Buildathon26-AIK-Team-4" target="_blank">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="project-card">
+                <div class="project-icon"><i class="fa-solid fa-house"></i></div>
+                <h3>Real Estate App</h3>
+                <p>Responsive real estate web app with property listings, search and filter functionality. Built as a team project with clean UI for all screen sizes.</p>
+                <span class="project-tag">Team Project</span>
+                <a href="https://github.com/Manasayasaswini/realestate" target="_blank">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="project-card">
+                <div class="project-icon"><i class="fa-solid fa-blind"></i></div>
+                <h3>Smart Blind Stick</h3>
+                <p>IoT-based assistive technology using ultrasonic sensors to help visually impaired individuals navigate safely. Won 1st Place in Model Making Competition.</p>
+                <span class="project-tag">IoT</span>
                 <a href="Academic.txt" target="_blank">View Details <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="project-card">
                 <div class="project-icon"><i class="fa-solid fa-shield-halved"></i></div>
                 <h3>Smart Safety Device</h3>
-                <p>A wearable safety device for women &amp; children with emergency alert functionality and GPS tracking.</p>
-                <span class="project-tag">Academic</span>
-                <a href="Academic.txt" target="_blank">View Details <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div class="project-card">
-                <div class="project-icon"><i class="fa-solid fa-laptop-code"></i></div>
-                <h3>Personal Portfolio</h3>
-                <p>A responsive personal portfolio website built with HTML, CSS, and JavaScript showcasing projects and skills.</p>
-                <span class="project-tag">Web Dev</span>
-                <a href="Non_Academic.txt" target="_blank">View Details <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div class="project-card">
-                <div class="project-icon"><i class="fa-solid fa-eye"></i></div>
-                <h3>Smart Blind Stick</h3>
-                <p>An assistive technology project using ultrasonic sensors to help visually impaired individuals navigate safely.</p>
+                <p>Wearable safety device for women &amp; children with emergency alert functionality and GPS tracking.</p>
                 <span class="project-tag">IoT</span>
-                <a href="Non_Academic.txt" target="_blank">View Details <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="Academic.txt" target="_blank">View Details <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
@@ -174,16 +217,40 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
                     <div class="timeline-header">
-                        <h3>Jr. Associate</h3>
+                        <h3>Junior Associate</h3>
                         <span class="timeline-company">WNS Global Services</span>
+                        <span class="timeline-date">March 2024 – December 2024</span>
                     </div>
-                    <p class="timeline-desc">Worked as a Junior Associate in a business process outsourcing environment, developing skills in data processing, client communication, and team collaboration.</p>
+                    <p class="timeline-desc">Processed and managed client data with high accuracy in a fast-paced BPO environment. Collaborated with cross-functional teams to consistently meet daily targets and SLA requirements.</p>
                     <div class="timeline-tags">
-                        <span>BPO</span>
                         <span>Data Processing</span>
                         <span>Team Collaboration</span>
+                        <span>Client Communication</span>
+                        <span>BPO</span>
                     </div>
                 </div>
+            </div>
+        </div>
+        
+        <h2 style="margin-top: 50px;">Certifications & Awards</h2>
+        <div class="projects-list">
+            <div class="project-card">
+                <div class="project-icon"><i class="fa-solid fa-trophy"></i></div>
+                <h3>1st Place – Model Making</h3>
+                <p>Project: Smart Blind Stick | PraRambh-2k19, Avanthi Institute of Engineering &amp; Technology</p>
+                <span class="project-tag">Award</span>
+            </div>
+            <div class="project-card">
+                <div class="project-icon"><i class="fa-brands fa-python"></i></div>
+                <h3>Python Programming Workshop</h3>
+                <p>APSSDC (Andhra Pradesh State Skill Development Corporation) – Certified completion</p>
+                <span class="project-tag">Certification</span>
+            </div>
+            <div class="project-card">
+                <div class="project-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                <h3>Soft Skills Training</h3>
+                <p>WNS Global Services – Workplace communication &amp; professional effectiveness</p>
+                <span class="project-tag">Certification</span>
             </div>
         </div>
     </section>
@@ -198,6 +265,7 @@
                 <ul class="contact-details">
                     <li><i class="fa-solid fa-user"></i> B. Manasa Yasaswini</li>
                     <li><i class="fa-solid fa-location-dot"></i> Visakhapatnam, Andhra Pradesh, India</li>
+                    <li><i class="fa-solid fa-phone"></i> +91 9703891953</li>
                     <li><i class="fa-solid fa-envelope"></i> manasayasaswini255@gmail.com</li>
                 </ul>
                 <div class="contact-social">
