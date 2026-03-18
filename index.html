@@ -266,7 +266,10 @@
                 </div>
             </div>
             <div class="contact-form-wrap">
-                <form name="submit-to-google-sheet">
+                <form action="https://formsubmit.co/manasayasaswini255@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://www.530020.online/#Contact">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -309,22 +312,6 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
-    </script>
-    <script>
-        // Contact form
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwCsUbZSOggEaAK75xL54YPR9oqF4rKaDk5VBDiyd_DeqZvnqd37aZR-X-BKeGrNN4RuQ/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    msg.innerHTML = "✓ Message sent successfully!"
-                    setTimeout(() => { msg.innerHTML = "" }, 5000)
-                    form.reset()
-                })
-                .catch(error => console.error('Error!', error.message))
-        })
     </script>
 </body>
 </html>

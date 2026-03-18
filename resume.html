@@ -14,6 +14,12 @@
     .no-print { display: none !important; }
     .page { box-shadow: none; margin: 0; padding: 0; width: 100%; min-height: auto; }
     .sec-title { color: #0b1d4e !important; }
+    section { break-inside: avoid; page-break-inside: avoid; }
+    .sec-title { break-after: avoid; page-break-after: avoid; }
+    .edu-table, .edu-table thead, .edu-table tbody, .edu-table tr, .edu-table th, .edu-table td {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
