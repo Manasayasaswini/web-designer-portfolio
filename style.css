@@ -336,7 +336,7 @@ section p { line-height: 1.75; color: var(--muted); }
 }
 
 .about-col-2 {
-    flex-basis: 58%;
+    flex-basis: 100%;
     min-width: 320px;
 }
 

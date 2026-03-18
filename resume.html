@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  /* ── PRINT: tight A4, no edit bar, no emoji headers ── */
+  @page {
+    size: A4;
+    margin: 10mm 12mm 10mm 12mm;
+  }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; background: #fff; }
+    .no-print { display: none !important; }
+    .page { box-shadow: none; margin: 0; padding: 0; width: 100%; min-height: auto; }
+    .sec-title { color: #0b1d4e !important; }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
+    font-size: 10.5pt;
+    color: #1a1a1a;
+    background: #e8e8e8;
+    line-height: 1.45;
+  }
+
+  .page {
+    background: #fff;
+    width: 210mm;
+    min-height: 297mm;
+    margin: 20px auto;
+    padding: 12mm 13mm;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  }
+
+  /* ── Header ── */
+  .header { margin-bottom: 9px; }
+  .header h1 {
+    font-size: 20pt; font-weight: 700; color: #0b1d4e;
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .header .role {
+    font-size: 10pt; color: #3d6bce; font-weight: 600; margin: 2px 0 6px;
+  }
+  .contact-line {
+    display: flex; flex-wrap: wrap; gap: 2px 14px; font-size: 9pt; color: #444;
+  }
+  .contact-line a { color: #0b1d4e; text-decoration: none; }
+  .divider { border: none; border-top: 2px solid #0b1d4e; margin: 8px 0 10px; }
+
+  /* ── Sections ── */
+  section { margin-bottom: 10px; }
+  .sec-title {
+    font-size: 9pt; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.2px; color: #0b1d4e;
+    border-bottom: 1.5px solid #0b1d4e;
+    padding-bottom: 2px; margin-bottom: 6px;
+  }
+
+  /* ── Summary ── */
+  .summary p { font-size: 10pt; color: #333; line-height: 1.6; word-wrap: break-word; overflow-wrap: break-word; }
+
+
+  /* ── Skills ── */
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 26px; }
+  .skill-row { display: flex; align-items: baseline; gap: 5px; font-size: 10pt; }
+  .skill-label { font-weight: 700; color: #0b1d4e; min-width: 126px; flex-shrink: 0; }
+  .skill-val { color: #333; }
+
+  /* ── Projects ── */
+  .project { margin-bottom: 8px; }
+  .project-header {
+    display: flex; justify-content: space-between;
+    align-items: baseline; flex-wrap: wrap; gap: 2px; margin-bottom: 1px;
+  }
+  .project-title { font-weight: 700; font-size: 10pt; color: #1a1a1a; }
+  .project-links { font-size: 8.5pt; }
+  .project-links a { color: #3d6bce; text-decoration: none; word-break: break-all;}
+  .project-tech { font-size: 8.5pt; color: #555; margin-bottom: 2px; font-style: italic; }
+  .project p { font-size: 9.5pt; color: #333; line-height: 1.5; word-wrap: break-word; overflow-wrap: break-word;}
+
+  /* ── Experience ── */
+  .entry { margin-bottom: 7px; }
+  .entry-header {
+    display: flex; justify-content: space-between;
+    align-items: baseline; flex-wrap: wrap; gap: 3px;
+  }
+  .entry-title { font-weight: 700; font-size: 10pt; color: #1a1a1a; }
+  .entry-org { font-weight: 600; color: #3d6bce; font-size: 10pt; }
+  .entry-date { font-size: 9pt; color: #666; white-space: nowrap; }
+  .entry-sub { font-size: 9pt; color: #555; margin: 2px 0 3px; }
+  .entry ul { padding-left: 14px; margin-top: 2px; }
+  .entry ul li { font-size: 9.5pt; color: #333; margin-bottom: 2px; line-height: 1.5; word-wrap: break-word; overflow-wrap: break-word;}
+
+  /* ── Education ── */
+  .edu-table { width: 100%; border-collapse: collapse; font-size: 9.5pt; }
+  .edu-table th {
+    background: #0b1d4e; color: #fff;
+    padding: 4px 7px; text-align: left; font-size: 9pt; font-weight: 600;
+  }
+  .edu-table td { padding: 4px 7px; border-bottom: 1px solid #e5e7eb; color: #333; }
+  .edu-table tr:nth-child(even) td { background: #f7f8fc; }
+
+  /* ── Certifications ── */
+  .certs ul { padding-left: 14px; }
+  .certs ul li { font-size: 9.5pt; color: #333; margin-bottom: 3px; line-height: 1.5; }
+
+  /* ── Edit bar (screen only) ── */
+  .edit-bar {
+    width: 210mm; margin: 0 auto;
+    background: #0b1d4e; color: #fff;
+    padding: 10px 20px; font-size: 9.5pt;
+    display: flex; align-items: center; justify-content: space-between;
+    border-radius: 6px 6px 0 0;
+  }
+  .edit-bar strong { color: #6b93e0; }
+  .edit-bar button {
+    background: #3d6bce; color: #fff; border: none;
+    padding: 7px 18px; border-radius: 4px;
+    cursor: pointer; font-size: 9.5pt; font-weight: 700;
+  }
+  .edit-bar button:hover { background: #2d5abf; }
+
+  /* ── Editable highlight (screen only) ── */
+  @media screen {
+    [contenteditable="true"]:hover,
+    [contenteditable="true"]:focus {
+      background: #eef3ff;
+      outline: 1.5px dashed #3d6bce;
+      border-radius: 2px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- EDIT BAR — hidden in print -->
+<div class="edit-bar no-print">
+  <span>✏️ <strong>Click any text to edit.</strong> Fill in details, then download as PDF.</span>
+  <button onclick="window.print()">⬇ Download PDF</button>
+</div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1 contenteditable="true">B. Manasa Yasaswini</h1>
+    <div class="role" contenteditable="true">Backend Heavy Full-Stack Developer</div>
+    <div class="contact-line">
+      <span>📧 <a href="mailto:manasayasaswini255@gmail.com">manasayasaswini255@gmail.com</a></span>
+      <span>📞 <span contenteditable="true">+91 9703891953</span></span>
+      <span>📍 Visakhapatnam, Andhra Pradesh, India</span>
+      <span>🔗 <a href="https://linkedin.com/in/manasa255" target="_blank">linkedin.com/in/manasa255</a></span>
+      <span>💻 <a href="https://github.com/Manasayasaswini" target="_blank">github.com/Manasayasaswini</a></span>
+    </div>
+  </div>
+  <hr class="divider">
+
+  <!-- SUMMARY -->
+  <section class="summary">
+    <div class="sec-title">Professional Summary</div>
+    <p contenteditable="true">Motivated Web Designer and Full-Stack Developer with hands-on experience building AI-powered web applications using Python, Flask, HTML5, CSS3, and JavaScript. Completed a 7-month intensive Backend Heavy Full-Stack Developer course at AI Karyashala, Visakhapatnam. Experienced in REST API development, database management (SQLite), and deploying applications to production. Brings professional experience from WNS Global Services and strong soft skills. Passionate about building user-friendly, real-world products and eager to contribute to a dynamic development team.</p>
+  </section>
+
+  <!-- SKILLS -->
+  <section>
+    <div class="sec-title">Technical Skills</div>
+    <div class="skills-grid">
+      <div class="skill-row"><span class="skill-label">Languages:</span><span class="skill-val" contenteditable="true">Python, JavaScript, C</span></div>
+      <div class="skill-row"><span class="skill-label">Frontend:</span><span class="skill-val" contenteditable="true">HTML5, CSS3, Responsive Design</span></div>
+      <div class="skill-row"><span class="skill-label">Backend:</span><span class="skill-val" contenteditable="true">Flask, REST APIs</span></div>
+      <div class="skill-row"><span class="skill-label">Databases:</span><span class="skill-val" contenteditable="true">SQLite, PostgreSQL (basics), Neon</span></div>
+      <div class="skill-row"><span class="skill-label">Design Tools:</span><span class="skill-val" contenteditable="true">Figma</span></div>
+      <div class="skill-row"><span class="skill-label">Tools &amp; Platforms:</span><span class="skill-val" contenteditable="true">Git, GitHub, VS Code, Vercel</span></div>
+      <div class="skill-row"><span class="skill-label">Other:</span><span class="skill-val" contenteditable="true">Typing: 30 WPM</span></div>
+      <div class="skill-row"><span class="skill-label">Soft Skills:</span><span class="skill-val" contenteditable="true">Team Collaboration, Communication</span></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section>
+    <div class="sec-title">Projects</div>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">MyTechicon – AI-Powered Technical Dictionary</span>
+        <span class="project-links">
+          <a href="https://github.com/Manasayasaswini/MyTechicon" target="_blank">github.com/Manasayasaswini/MyTechicon</a>
+          &nbsp;|&nbsp;
+          <a href="https://www.530020.online/mytechicon" target="_blank">530020.online/mytechicon</a>
+        </span>
+      </div>
+      <div class="project-tech">Python · Flask · HTML5 · CSS3 · JavaScript · SQLite · AI/LLM API</div>
+      <p contenteditable="true">Built a full-stack web application enabling users to capture, simplify, and master technical terms through AI-generated definitions and personal multimedia notes. Integrated an LLM API for intelligent definitions, implemented SQLite for data persistence, and deployed to a live custom domain.</p>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">Sanskrit Sarathi – Sanskrit Learning Platform</span>
+        <span class="project-links">
+          <a href="https://github.com/Manasayasaswini/SanskritSarathi" target="_blank">github.com/Manasayasaswini/SanskritSarathi</a>
+        </span>
+      </div>
+      <div class="project-tech" contenteditable="true">Python · Flask · HTML5 · CSS3 · JavaScript</div>
+      <p contenteditable="true">Designed and developed an interactive web platform to teach Sanskrit through structured lessons, vocabulary, and practice exercises. Focused on accessible UI design and a progressive, beginner-friendly learning flow.</p>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">Real Estate Web Application <span style="font-size:8pt;font-weight:400;color:#666;">(Team Project)</span></span>
+        <span class="project-links">
+          <a href="https://github.com/Manasayasaswini/realestate" target="_blank">github.com/Manasayasaswini/realestate</a>
+        </span>
+      </div>
+      <div class="project-tech" contenteditable="true">HTML5 · CSS3 · JavaScript · Python · Flask</div>
+      <p contenteditable="true">Collaborated in a team to build a responsive real estate web app featuring property listings, search and filter functionality, and a clean UI for seamless browsing across all screen sizes.</p>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">BlastAnalyser – Bioinformatics AI Tool <span style="font-size:8pt;font-weight:400;color:#666;">(Team Project · Buildathon 2026, Vizag)</span></span>
+        <span class="project-links">
+          <a href="https://github.com/Buildathon26/Buildathon26-AIK-Team-4" target="_blank">github.com/Buildathon26/Buildathon26-AIK-Team-4</a>
+        </span>
+      </div>
+      <div class="project-tech" contenteditable="true">Python · Flask · AI/LLM · HTML5 · CSS3 · JavaScript</div>
+      <p contenteditable="true">Built during Buildathon 2026, an AI hackathon held in Visakhapatnam. Developed a bioinformatics tool to analyse BLAST DNA sequence results using an LLM, helping researchers interpret genomic data more efficiently through AI-generated summaries and insights.</p>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">Academic Projects – Avanthi Institute of Engineering &amp; Technology</span>
+      </div>
+      <div class="project-tech">IoT · Arduino · Embedded C · GPS · GSM · Ultrasonic Sensors</div>
+      <p>Smart Road Safety System &nbsp;·&nbsp; Smart Safety Device for Women &amp; Children &nbsp;·&nbsp; Smart Blind Stick &nbsp;— <em>1st Place, Model Making Competition, PraRambh-2k19</em></p>
+    </div>
+  </section>
+
+  <!-- WORK EXPERIENCE -->
+  <section>
+    <div class="sec-title">Work Experience</div>
+    <div class="entry">
+      <div class="entry-header">
+        <span><span class="entry-title">Junior Associate</span> &nbsp;·&nbsp; <span class="entry-org">WNS Global Services</span></span>
+        <span class="entry-date" contenteditable="true">March 2024 – December 2024</span>
+      </div>
+      <div class="entry-sub">Visakhapatnam, Andhra Pradesh &nbsp;|&nbsp; Business Process Outsourcing</div>
+      <ul>
+        <li contenteditable="true">Processed and managed client data with high accuracy in a fast-paced BPO environment.</li>
+        <li contenteditable="true">Collaborated with cross-functional teams to consistently meet daily targets and SLA requirements.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section>
+    <div class="sec-title">Education</div>
+    <table class="edu-table">
+      <thead>
+        <tr><th>Degree / Level</th><th>Institution</th><th>Year</th><th>Score</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>B.Tech – Electronics &amp; Communication Engineering (ECE)</td>
+          <td>Avanthi Institute of Engineering &amp; Technology</td>
+          <td>2019 – 2023</td>
+          <td>CGPA: 6.98</td>
+        </tr>
+        <tr>
+          <td>Intermediate (MPC)</td>
+          <td contenteditable="true">Sri Chaitanya Junior College</td>
+          <td>2017 – 2019</td>
+          <td>CGPA: 8.2</td>
+        </tr>
+        <tr>
+          <td>10th SSC</td>
+          <td contenteditable="true">Ravindra Bharathi EM School</td>
+          <td>2017</td>
+          <td>CGPA: 9.8</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="certs">
+    <div class="sec-title">Certifications &amp; Courses</div>
+    <ul>
+      <li><strong>Backend Heavy Full-Stack Developer</strong> – AI Karyashala, Visakhapatnam &nbsp;·&nbsp; 7-month intensive program (Python, Flask, Databases, REST APIs, Web Development)</li>
+      <li><strong>1st Place – Model Making Competition</strong> &nbsp;·&nbsp; Project: Smart Blind Stick &nbsp;·&nbsp; PraRambh-2k19, Avanthi Institute of Engineering &amp; Technology</li>
+      <li><strong>Python Programming Workshop</strong> – APSSDC (Andhra Pradesh State Skill Development Corporation) &nbsp;·&nbsp; Certified completion</li>
+      <li><strong>Soft Skills Training Certificate</strong> – WNS Global Services &nbsp;·&nbsp; Workplace communication &amp; professional effectiveness</li>
+    </ul>
+  </section>
+
+</div>
+</body>
+</html>
